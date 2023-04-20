@@ -22,9 +22,8 @@ jobs:
           rm -rf DailyDuty/
           ls | grep "^DailyDuty" | sed "p;s/DailyDuty/DailyDuty3/" | xargs -n2 mv
           sed -i "s/\"DailyDuty\"/\"DailyDuty3\"/" DailyDuty3.json
-          zip -r archive.zip .
           cd ../../../..
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          path: DailyDuty/bin/x64/Release/archive.zip
+          path: DailyDuty/bin/x64/Release/*
