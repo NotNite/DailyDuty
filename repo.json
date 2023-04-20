@@ -1,0 +1,21 @@
+[
+  {
+    "Author": "MidoriKami, NotNite",
+    "Name": "Daily Duty",
+    "InternalName": "DailyDuty3",
+    "AssemblyVersion": "3.3.0.2",
+    "Description": "Fork of DailyDuty pinned on pre-4.0",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/NotNite/DailyDuty",
+    "Tags": ["utility"],
+    "CategoryTags": ["Utility", "Other"],
+    "DalamudApiLevel": 8,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "LoadPriority": 0,
+    "Punchline": "Fork of DailyDuty pinned on pre-4.0",
+    "DownloadLinkInstall": "https://nightly.link/NotNite/DailyDuty/actions/runs/4749499649/artifact.zip",
+    "DownloadLinkUpdate": "https://nightly.link/NotNite/DailyDuty/actions/runs/4749499649/artifact.zip",
+    "DownloadLinkTesting": "https://nightly.link/NotNite/DailyDuty/actions/runs/4749499649/artifact.zip"
+  }
+]
