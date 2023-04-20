@@ -20,8 +20,8 @@ jobs:
         run: |
           cd DailyDuty/bin/x64/Release
           rm -rf DailyDuty/
-          ls | grep "^DailyDuty" | sed "p;s/DailyDuty/DailyDuty3/" | xargs -n2 mv
-          sed -i "s/\"DailyDuty\"/\"DailyDuty3\"/" DailyDuty3.json
+          Get-ChildItem . | Where {$_.Name -match "DailyDuty"} | Rename-Item -NewName {$_.name -replace "DailyDuty","DailyDuty3" }
+          Set-Content -Path DailyDuty3.json ((Get-Content DailyDuty3.json) -replace '"DailyDuty"', '"DailyDuty3"')
           cd ../../../..
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
