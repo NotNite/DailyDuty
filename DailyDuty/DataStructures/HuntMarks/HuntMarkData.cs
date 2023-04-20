@@ -22,7 +22,7 @@ public unsafe class HuntMarkData
     
     private HuntData this[HuntMarkType type] => new()
     {
-        HuntID = HuntStruct->MarkID[(int)type],
+        HuntID = HuntStruct->ObtainedMarkId[(int)type],
         HuntType = type,
         Obtained = HuntStruct->IsMarkBillObtained((int)type),
         KillCounts = HuntStruct->CurrentKillsSpan[(int)type],
