@@ -19,7 +19,7 @@ jobs:
       - name: Hack around InternalName
         run: |
           cd DailyDuty/bin/x64/Release
-          rm -rf DailyDuty/
+          Remove-Item ./DailyDuty -Force -Recurse
           Get-ChildItem . | Where {$_.Name -match "DailyDuty"} | Rename-Item -NewName {$_.name -replace "DailyDuty","DailyDuty3" }
           Set-Content -Path DailyDuty3.json ((Get-Content DailyDuty3.json) -replace '"DailyDuty"', '"DailyDuty3"')
           cd ../../../..
